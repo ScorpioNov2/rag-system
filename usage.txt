@@ -1,0 +1,18 @@
+# USAGE
+
+## scripts/index_documents.py — run 1 time to build index:
+
+```
+python scripts/index_documents.py --file data/learn.txt
+python scripts/index_documents.py --dir data/ --store turbovec
+python scripts/index_documents.py --file data.txt --chunk-size 500
+```
+
+## scripts/rag_cli.py — test retrieval no needed agent/LLM:
+
+```
+python scripts/rag_cli.py --help                        # detail usage
+python scripts/rag_cli.py                               # query all 2 stores
+python scripts/rag_cli.py --store turbovec --k 3        # query in turbovec_store/ with n_result = 3
+python scripts/rag_cli.py --compare                     # compare Chroma vs TurboVec side-by-side + overlap count
+```
